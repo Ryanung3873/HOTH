@@ -2,7 +2,7 @@ import React from "react";
 import "./Landing.css";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Landing() {
   return (
     <div className="App">
       <header class="header">
@@ -23,20 +23,6 @@ function Home() {
           </ul>
         </nav>
       </header>
-
-      <div className="first-section">
-        <div>
-          <h1 className="title-home">Food For You</h1>
-        </div>
-        <div className="description">
-          <h2 className="h2-description">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.{" "}
-          </h2>
-        </div>
-      </div>
 
       <div class="cards-heading">
         <span class="subheading">Meals</span>
@@ -128,4 +114,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Landing;
