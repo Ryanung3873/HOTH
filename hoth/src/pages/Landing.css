@@ -134,19 +134,7 @@ Primary: #e67e22
   padding-bottom: 5rem;
 }
 
-/* .card {
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  border-radius: 11px;
-  overflow: hidden;
-  transition: all 0.4s;
-  margin: 1rem;
-  padding: 1rem;
-  line-height: 1.8rem;
-  display: grid;
-  grid-template-rows: 2;
-} */
-
-.card {
+.landing-card {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
@@ -189,15 +177,15 @@ Primary: #e67e22
   background-color: #fdc976;
 }
 
-.card-content {
+.landing-card-content {
   margin: 0;
   padding: 0;
 }
 
-.card-title {
-  font-size: 2.5rem;
+.landing-card-title {
+  font-size: 2rem;
   line-height: 2.5rem;
-  font-weight: bold;
+  font-weight: 600;
   margin: 1rem;
 }
 
