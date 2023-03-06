@@ -12,6 +12,31 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+// import { useHistory } from "react-router-dom";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#4caf50", // blue button color
+    },
+    background: {
+      default: "#fff",
+      paper: "#f5f5f5",
+    },
+  },
+  components: {
+    MuiInput: {
+      defaultProps: {
+        variant: "outlined",
+        sx: {
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#4caf50", // green input highlight color
+          },
+        },
+      },
+    },
+  },
+});
 
 function Copyright(props) {
   return (
@@ -23,7 +48,7 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        WeLit.org
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -31,9 +56,8 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
-
 export default function SignUp() {
+  // const history = useHistory();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -41,6 +65,8 @@ export default function SignUp() {
       email: data.get("email"),
       password: data.get("password"),
     });
+
+    // history.push("/Landing");
   };
 
   return (
@@ -55,9 +81,6 @@ export default function SignUp() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
-          </Avatar>
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
@@ -119,14 +142,16 @@ export default function SignUp() {
                 />
               </Grid>
             </Grid>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign Up
-            </Button>
+            <Link to="/Landing">
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Sign Up
+              </Button>
+            </Link>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="#" variant="body2">

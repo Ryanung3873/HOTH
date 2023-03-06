@@ -1,25 +1,8 @@
-/* -- 02 COLORS 
-
-Primary: #e67e22
-
-- Tints:
-#fdf2e9
-#fae5d3
-- Shades:
-#45260a
-- Accents: 
-- Greys: 
-#888
-#767676   <--- lightest grey allowed on white
-#6f6f6f     <--- lightest grey allowed on fdf2e9
-#555
-#333 */
-
 .header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #fdf2e9;
+  background-color: #e8f5e9;
   height: 4em;
   padding: 0 4.8rem;
   position: relative;
@@ -52,7 +35,7 @@ Primary: #e67e22
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #cf711f;
+  color: #8bd478;
 }
 
 .main-nav-link.nav-cta:link,
@@ -60,12 +43,12 @@ Primary: #e67e22
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
   color: #fff;
-  background-color: #e67e22;
+  background-color: #8bd478;
 }
 
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
-  background-color: #cf711f;
+  background-color: #8bd478;
 }
 
 /* MOBILE */
@@ -97,7 +80,7 @@ Primary: #e67e22
   padding-top: 0;
   padding-bottom: 0;
   z-index: 10000;
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.07);
 }
 
 .sticky .section-hero {
@@ -135,7 +118,7 @@ Primary: #e67e22
 }
 
 .meal {
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.12);
   border-radius: 11px;
   overflow: hidden;
   transition: all 0.4s;
@@ -148,7 +131,7 @@ Primary: #e67e22
   padding: 1.2rem 2.4rem;
   border-radius: 25px;
   color: #fff;
-  background-color: #e67e22;
+  background-color: #8bd478;
   font-size: 1rem;
   border: white;
   height: 2.5rem;
@@ -181,4 +164,15 @@ Primary: #e67e22
   margin: 2rem;
   font-weight: bold;
   font-size: 2.4rem;
+}
+
+#myButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  font-weight: bold;
+  font-size: 4rem;
 }

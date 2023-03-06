@@ -24,6 +24,8 @@ function Landing() {
         </nav>
       </header>
 
+      <button id="myButton">+</button>
+
       <div class="cards-heading">
         <span class="subheading">Meals</span>
         <h2 class="heading-secondary">Recipies and shit</h2>

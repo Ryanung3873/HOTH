@@ -13,6 +13,30 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#4caf50", // blue button color
+    },
+    background: {
+      default: "#fff",
+      paper: "#f5f5f5",
+    },
+  },
+  components: {
+    MuiInput: {
+      defaultProps: {
+        variant: "outlined",
+        sx: {
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#4caf50", // green input highlight color
+          },
+        },
+      },
+    },
+  },
+});
+
 function Copyright(props) {
   return (
     <Typography
@@ -23,15 +47,13 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        WeLit.org
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
   );
 }
-
-const theme = createTheme();
 
 export default function SignIn() {
   const handleSubmit = (event) => {
@@ -55,9 +77,9 @@ export default function SignIn() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+          {/* <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
-          </Avatar>
+          </Avatar> */}
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>

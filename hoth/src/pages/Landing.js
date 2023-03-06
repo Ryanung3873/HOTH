@@ -20,6 +20,12 @@ function Home() {
                 <button className="loginButton">Login</button>
               </Link>
             </li>
+            <li>
+              <Link to="/Home">
+                {" "}
+                <button className="signUpButton">Home</button>
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -28,6 +34,7 @@ function Home() {
         <div>
           <h1 className="title-home">Food For You</h1>
         </div>
+        <div className="test"></div>
         <div className="description">
           <h2 className="h2-description">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -39,89 +46,41 @@ function Home() {
       </div>
 
       <div class="cards-heading">
-        <span class="subheading">Meals</span>
-        <h2 class="heading-secondary">Recipies and shit</h2>
+        <span class="subheading">Features</span>
+        <h2 class="heading-secondary">Why you should use us</h2>
       </div>
       <div class="container grid grid--3-cols margin-bottom-md ">
-        <div class="meal">
-          <div class="meal-content">
-            <div class="meal-tags">
-              <span class="tag tag--vegetarian">Vegetarian</span>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-title">Keep Track!</div>
+            <div class="card-caption">
+              Track calories, sodium, fat, etc by using ourrecipies and adding
+              your own
             </div>
-            <p class="meal-title">Japanese Gyozas</p>
-            <ul class="meal-attributes">
-              <li class="meal-attribute">
-                <span>
-                  <strong>650</strong> calories
-                </span>
-              </li>
-              <li class="meal-attribute">
-                <span>
-                  NutriScore &reg; <strong>74</strong>
-                </span>
-              </li>
-              <li class="meal-attribute">
-                <span>
-                  {" "}
-                  <strong>4.9</strong> rating (537)
-                </span>
-              </li>
-            </ul>
           </div>
+          <div class="color-block-1"></div>
         </div>
 
-        <div class="meal">
-          <div class="meal-content">
-            <div class="meal-tags">
-              <span class="tag tag--vegetarian">Vegetarian</span>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-title">Eat Healthier and more Sustainable!</div>
+            <div class="card-caption">
+              Learn to eat and cook healthier recipies that aim to reduce your
+              carbon footprint and make you feel better
             </div>
-            <p class="meal-title">Japanese Gyozas</p>
-            <ul class="meal-attributes">
-              <li class="meal-attribute">
-                <span>
-                  <strong>650</strong> calories
-                </span>
-              </li>
-              <li class="meal-attribute">
-                <span>
-                  NutriScore &reg; <strong>74</strong>
-                </span>
-              </li>
-              <li class="meal-attribute">
-                <span>
-                  {" "}
-                  <strong>4.9</strong> rating (537)
-                </span>
-              </li>
-            </ul>
           </div>
+          <div class="color-block-2"></div>
         </div>
 
-        <div class="meal">
-          <div class="meal-content">
-            <div class="meal-tags">
-              <span class="tag tag--vegetarian">Vegetarian</span>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-title">Keep Track!</div>
+            <div class="card-caption">
+              Track calories, sodium, fat, etc by using ourrecipies and adding
+              your own
             </div>
-            <p class="meal-title">Japanese Gyozas</p>
-            <ul class="meal-attributes">
-              <li class="meal-attribute">
-                <span>
-                  <strong>650</strong> calories
-                </span>
-              </li>
-              <li class="meal-attribute">
-                <span>
-                  NutriScore &reg; <strong>74</strong>
-                </span>
-              </li>
-              <li class="meal-attribute">
-                <span>
-                  {" "}
-                  <strong>4.9</strong> rating (537)
-                </span>
-              </li>
-            </ul>
           </div>
+          <div class="color-block-3"></div>
         </div>
       </div>
     </div>
