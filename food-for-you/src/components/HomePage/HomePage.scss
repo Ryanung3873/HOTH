@@ -1,0 +1,237 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #89CFF0;
+    height: 4em;
+    padding: 0 4.8rem;
+    position: relative;
+  }
+  
+  .logo {
+    height: 2.2rem;
+  }
+  
+  /* ***************************************** */
+  /* NAVIGATION */
+  /* ***************************************** */
+  
+  .main-nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    text-align: center;
+  }
+  
+  /* .main-nav-link:link,
+  .main-nav-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .main-nav-link:hover,
+  .main-nav-link:active {
+    color: #65dbff;
+  }
+  
+  .main-nav-link.nav-cta:link,
+  .main-nav-link.nav-cta:visited {
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    color: #fff;
+    background-color: #65dbff;
+  }
+  
+  .main-nav-link.nav-cta:hover,
+  .main-nav-link.nav-cta:active {
+    background-color: #65dbff
+  }
+   */
+  /* MOBILE */
+  .btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .icon-mobile-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+  }
+  
+  .icon-mobile-nav[name="close-outline"] {
+    /* .class[name=""] to select a certain element with the specified name */
+    display: none;
+  }
+  
+  .sticky .header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.96);
+    height: 4rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 10000;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.07);
+  }
+  
+  .sticky .section-hero {
+    margin-top: 9.6rem;
+  }
+  
+  .title-home {
+    font-size: 6rem;
+    margin: 4rem;
+    margin-top: 10rem;
+  }
+  
+  .description {
+    grid-column: 1;
+    margin: 3rem;
+    margin-top: 0;
+  }
+  
+  .h2-description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: black;
+  }
+  
+  .first-section {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    padding-bottom: 5rem;
+  }
+  
+  .grid--3-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 5rem;
+    grid-template-rows: 1fr;
+  }
+  
+  .loginButton {
+    padding: 1.2rem 2.4rem;
+    border-radius: 25px;
+    color: #000000;
+    background-color: #f0899c;
+    font-size: 1rem;
+    border: white;
+    height: 2.5rem;
+    margin: 4rem ;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .btn {
+    margin: 0 auto;
+  }
+  
+  .signUpButton {
+    padding: 1.2rem 2.4rem;
+    border-radius: 25px;
+    color: #000000;
+    background-color: #fff;
+    border: white;
+    font-size: 1rem;
+    height: 2.5rem;
+    text-align: center;
+  }
+  
+  .subheading {
+    color: black;
+    padding-bottom: 10rem;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .heading-secondary {
+    color: black;
+    margin: 2rem;
+    font-weight: bold;
+    font-size: 2.4rem;
+  }
+  
+  #myButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    font-weight: bold;
+    z-index: 10000000;
+  
+    font-size: 4rem;
+  }
+  .homeButton {
+    position: absolute;
+    width: 155px;
+    height: 60px;
+    left: 10px;
+    top: 2px;
+  
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 62px;
+
+    border: none;
+    background:none;
+  
+    /* color: #65dbff; */
+    color: #ffffff
+  }
+  
+  .recipe-card {
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 11px;
+    overflow: hidden;
+    transition: all 0.4s;
+    margin: 2.5rem;
+    padding: 1rem;
+    line-height: 1.8rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
+    height: 26rem;
+    font-size: 1.5rem;
+    background-color: #f1f1f1;
+  }
+  
+  /* .card-container {
+    display: flex;
+  } */
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .recipe-card-title {
+    margin-bottom: 0;
+    font-size: 0.875em;
+    background-color: #65dbff;
+    size: 1rem;
+  }
+  
+  .recipe-card-img {
+    grid-row: 3;
+    position: absolute;
+  }
+  
+  .recipe-card-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin: 1rem;
+  }

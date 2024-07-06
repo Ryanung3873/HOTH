@@ -11,6 +11,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Navbar from "../Navbar/Navbar";
 
 const theme = createTheme({
   palette: {
@@ -38,6 +39,7 @@ const theme = createTheme({
 
 function Copyright(props) {
   return (
+    <>
     <Typography
       variant="body2"
       color="text.secondary"
@@ -50,7 +52,7 @@ function Copyright(props) {
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
-    </Typography>
+    </Typography></>
   );
 }
 
@@ -65,6 +67,8 @@ export default function SignIn() {
   };
 
   return (
+    <>
+    <Navbar />
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -77,8 +81,8 @@ export default function SignIn() {
           }}
         >
           {/* <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
-          </Avatar> */}
+      <LockOutlinedIcon />
+    </Avatar> */}
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
@@ -96,8 +100,7 @@ export default function SignIn() {
               label="Email Address"
               name="email"
               autoComplete="email"
-              autoFocus
-            />
+              autoFocus />
             <TextField
               margin="normal"
               required
@@ -106,12 +109,10 @@ export default function SignIn() {
               label="Password"
               type="password"
               id="password"
-              autoComplete="current-password"
-            />
+              autoComplete="current-password" />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+              label="Remember me" />
             <Button
               type="submit"
               fullWidth
@@ -136,6 +137,6 @@ export default function SignIn() {
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
-    </ThemeProvider>
+    </ThemeProvider></>
   );
 }

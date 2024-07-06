@@ -19,9 +19,15 @@ const recipeService = require("./services/RecipeService");
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/api/recipes', async (req, res) => {
+app.get('/api/recipes?:recipe', async (req, res) => {
+  let originalUrl = req.originalUrl;    // get original url from request
+  let recipeQuery = originalUrl.substring(originalUrl.indexOf('?') + 1);    // find query from substring
+  if(recipeQuery === "/api/recipes" || recipeQuery === "") {    // if no query exists
+    recipeQuery = "snack";                     // set recipeQuery to null --> no search, set default search (snack)
+  }
+  console.log(recipeQuery);
   try {
-    const data = await recipeService.getRecipes();
+    const data = await recipeService.getRecipes(recipeQuery);
     res.send(data);
   } catch (error) {
     console.error("Error: ", error);

@@ -6,7 +6,7 @@ require('dotenv').config( {path : "./.env"});
 const app = express();
 const port = process.env.PORT || 8000;
 
-async function getRecipes() {
+async function getRecipes(recipeQuery) {
     // app.get("/get-recipes", (req, res) => {
     const path = "https://api.edamam.com/api/recipes/v2";
 
@@ -14,7 +14,12 @@ async function getRecipes() {
     const APP_KEY = process.env.APP_KEY;
 
     try {
-        const response = await axios.get(path + "?app_id=" + APP_ID + "&app_key=" + APP_KEY+ "&type=public&cuisineType=American&mealType=Dinner&diet=high-protein");
+        var response = '';
+        if(recipeQuery) {
+            response = await axios.get(path + "?app_id=" + APP_ID + "&app_key=" + APP_KEY + "&type=public&" + "&q=" + recipeQuery);
+        } else {
+            response = await axios.get(path + "?app_id=" + APP_ID + "&app_key=" + APP_KEY+ "&type=public&cuisineType=American&mealType=Dinner&diet=high-protein");
+        }
         const data = response.data;         // data is in json
         return data;
     } catch (err) {
